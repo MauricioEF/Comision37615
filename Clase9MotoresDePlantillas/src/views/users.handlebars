@@ -1,0 +1,10 @@
+<div>
+    <h1>Hola {{name}}, aquí una lista de usuarios</h1>
+    {{#each users}}
+        <div>
+            <p>{{this.name}}</p>
+            <p>{{this.email}}</p>
+            <br/>
+        </div>
+    {{/each}}
+</div>
