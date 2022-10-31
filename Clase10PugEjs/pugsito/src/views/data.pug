@@ -1,0 +1,11 @@
+html
+    head
+        title="Medidor del poder y del saber"
+    body
+        div(style='color:blue;') !{titulo}
+        meter(min=min,max=max,value=nivel)
+        ul
+            each user in users
+                li
+                    p=user.name
+                    p=user.edad

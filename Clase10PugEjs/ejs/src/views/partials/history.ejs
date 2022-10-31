@@ -1,0 +1,10 @@
+
+<% if (users.length>0) { %>
+    <% users.forEach(user => { %>
+        <p> <%= user.name %> </p>
+        <p> <%= user.last_name %> </p>
+        <p> <%= user.age %> </p>
+    <% }) %>
+<% } else { %>
+    <p>No hay datos por mostrar</p>
+<% } %> 

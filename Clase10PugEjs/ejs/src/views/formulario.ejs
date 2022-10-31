@@ -1,0 +1,11 @@
+<form action="/users" method="post" enctype="multipart/form-data">
+    <label>Nombre</label>
+    <input name="name">
+    <label>Apellido</label>
+    <input name="last_name">
+    <label>Edad</label>
+    <input name="age">
+    <button> Enviar usuario </button>
+</form>
+
+<%- include('./partials/history', {users}) %> 
