@@ -1,0 +1,21 @@
+[
+	{
+		"id": 1,
+		"artworks": [
+			1
+		]
+	},
+	{
+		"id": 2,
+		"artworks": [
+			{
+				"id":2,
+				"quantity":3
+			},
+			{
+				"id":1,
+				"quantity":10
+			}
+		]
+	}
+]

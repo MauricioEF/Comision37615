@@ -1,0 +1,23 @@
+[
+	{
+		"title": "La persistencia del tiempo",
+		"author": "Salvador Dalí",
+		"price": 20500,
+		"copies": 20,
+		"id": 1
+	},
+	{
+		"title": "La noche estrellada",
+		"author": "Vincent van Gogh",
+		"price": 25000,
+		"copies": 15,
+		"id": 2
+	},
+	{
+		"title": "Saturno devorando a su hijo",
+		"author": "No me acuerdo",
+		"price": 23000,
+		"copies": 20,
+		"id": 3
+	}
+]
