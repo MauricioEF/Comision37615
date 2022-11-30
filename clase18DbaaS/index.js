@@ -1,10 +1,10 @@
 import admin from 'firebase-admin';
-import firebaseConfig from './clavepapasconquesoychili.json' assert {type:'json'};
+// import firebaseConfig from './clavepapasconquesoychili.json' assert {type:'json'};
 import fs from 'fs';
 
 
 const FirebaseCRUD = async() =>{
-    let firebaseConfig = await fs.promises.readFile('./clavepapasconquesoychili.json','utf-8');
+    let firebaseConfig = await fs.promises.readFile('./RUTA DE TU ARCHIVO','utf-8');
     let config = JSON.parse(firebaseConfig);
     admin.initializeApp({
         credential:admin.credential.cert(config)

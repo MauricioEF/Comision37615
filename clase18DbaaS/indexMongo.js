@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import usersModel from './models/User.js';
 
-const connection = mongoose.connect('mongodb+srv://CoderUser:123@codercluster.difiz1u.mongodb.net/BaseFeliz?retryWrites=true&w=majority',err=>{
+const connection = mongoose.connect('TU URL DE MONGO AQUÍ :) ',err=>{
     if(err) console.log(err);
     else console.log("Base conectada")
 })
