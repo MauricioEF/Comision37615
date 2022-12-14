@@ -1,34 +1,25 @@
 import { Router } from "express";
-import userModel from "../models/User.js";
+import passport from "passport";
 
 const router = Router();
 
-router.post('/register',async(req,res)=>{
-    const {first_name,last_name,email,password} = req.body;
-    if(!first_name||!last_name||!email||!password) return res.status(400).send({status:"error",error:"Valores incompletos"});
-    const exists = await userModel.findOne({email});
-    if(exists) return res.status(400).send({status:"error",error:"El usuario ya existe"});
-    const user = {
-        first_name,
-        last_name,
-        email,
-        password
-    }
-    const result = await userModel.create(user);
-    res.send({status:"success",payload:result._id})
+router.post('/register', passport.authenticate('register',{failureRedirect:'/api/sessions/failedregister'}), async(req,res)=>{
+    const user = req.user;
+    res.send({status:"success",payload:user._id})
+})
+router.get('/failedregister',(req,res)=>{
+    console.log("Passport falló");
+    res.status(500).send({status:"error",error:"Error de passport"})
 })
 
-router.post('/login',async (req,res)=>{
-    const {email,password} = req.body;
-    if(!email||!password) return res.status(400).send({status:"error",error:"Valores incompletos"});
-    const user = await userModel.findOne({email,password});
-    if(!user) return res.status(400).send({status:"error",error:"Usuario o contraseña incorrectos"})
+router.post('/login',passport.authenticate('login'),async (req,res)=>{
     req.session.user = {
-        name: `${user.first_name} ${user.last_name}`,
-        email: user.email,
-        role: user.role
+        name: `${req.user.first_name} ${req.user.last_name}`,
+        email: req.user.email,
+        role: req.user.role
     }
     res.send({status:"success", message:"Logueado!"})
 })
+
 
 export default router;
