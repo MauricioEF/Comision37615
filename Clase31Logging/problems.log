@@ -1,0 +1,23 @@
+{"level":"warn","message":"La ruta /babas está siendo visitada"}
+{"level":"info","message":"127.0.0.1 - there's no place like home"}
+{"level":"warn","message":"127.0.0.1 - there's no place like home"}
+{"level":"error","message":"127.0.0.1 - there's no place like home"}
+{"level":"info","message":"127.0.0.1 - there's no place like home"}
+{"level":"warn","message":"127.0.0.1 - there's no place like home"}
+{"level":"error","message":"127.0.0.1 - there's no place like home"}
+{"level":"warn","message":"La ruta /babas está siendo visitada"}
+{"level":"warn","message":"La ruta /babas está siendo visitada"}
+{"level":"info","message":"127.0.0.1 - there's no place like home"}
+{"level":"error","message":"127.0.0.1 - there's no place like home"}
+{"level":"info","message":"127.0.0.1 - there's no place like home"}
+{"level":"error","message":"127.0.0.1 - there's no place like home"}
+{"level":"fatal","message":"FATAL"}
+{"level":"info","message":"127.0.0.1 - there's no place like home"}
+{"level":"error","message":"127.0.0.1 - there's no place like home"}
+{"level":"fatal","message":"127.0.0.1 - FATAL"}
+{"level":"info","message":"GET en / - 08:33:13"}
+{"level":"info","message":"GET en /babas - 08:33:33"}
+{"level":"info","message":"GET en /babas - 08:33:50"}
+{"level":"info","message":"GET en / - 08:33:58"}
+{"level":"info","message":"GET en / - 08:34:36"}
+{"level":"error","message":"AAAAAAA"}
