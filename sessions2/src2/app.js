@@ -10,7 +10,7 @@ import passport from 'passport';
 import initializePassport from './config/passport.config.js';
 
 const app = express();
-const connection = mongoose.connect('mongodb+srv://CoderUser:123@codercluster.w5adegs.mongodb.net/papaconqueso?retryWrites=true&w=majority')
+const connection = mongoose.connect('URL MONGO')
 
 app.engine('handlebars',handlebars.engine());
 app.set('views',__dirname+'/views');
@@ -18,7 +18,7 @@ app.set('view engine','handlebars');
 
 app.use(session({
     store:MongoStore.create({
-        mongoUrl:'mongodb+srv://CoderUser:123@codercluster.w5adegs.mongodb.net/papaconqueso?retryWrites=true&w=majority',
+        mongoUrl:'URL MONGO',
         ttl:100
     }),
     secret:'Coder89134epasc3',
