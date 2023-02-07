@@ -1,0 +1,46 @@
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          description: Id autogenerado por mongo
+        first_name:
+          type: string
+          description: Nombre del usuario
+        last_name:
+          type: string
+          description: Apellido del usuario
+        email:
+          type: string
+          description: correo del usuario
+        password:
+          type: string
+          description: Contraseña encriptada el usuario
+        role:
+          type: string
+          description: rol del usuario
+      example:
+        _id: ObjectId("aasd2213asd")
+        first_name: Jimmy
+        last_name: Ramirez
+        email: correojimmy@correo.com
+        password: as97d(CA8=#"/#&A")
+        role: user
+
+paths:
+  /api/users/:
+    get:
+      summary: Obtiene todos los usuarios en base
+      tags:
+        - Users
+      responses:
+        "200":
+          description: Los usuarios se obtuvieron correctamente de la base de datos.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
