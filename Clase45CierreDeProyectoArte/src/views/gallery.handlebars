@@ -1,0 +1,12 @@
+{{#if artworks}}
+    <h2>Tu galería de arte :)</h2>
+    {{#each artworks}}
+        <p>{{this.artwork.title}}</p>
+        <p>{{this.artwork.author}}</p>
+        <p>{{this.artwork.price}}</p>
+        <p>{{this.artwork.movement}}</p>
+        <img src={{this.artwork.image}}>
+    {{/each}}
+{{else}}
+    <h2>Aún no hay obras de arte en tu galería</h2>
+{{/if}}

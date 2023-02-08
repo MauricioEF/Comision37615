@@ -1,0 +1,40 @@
+components:
+  requestBodies:
+    nuevoUsuario:
+      type: object
+      properties:
+        first_name:
+          type: string
+          description: Nombre del usuario
+        last_name:
+          type: string
+          description: Apellido del usuario
+        email:
+          type: string
+          description: correo del usuario (El campo debe ser único)
+        password:
+          type: string
+          description: Contraseña del usuario sin encriptar
+      example:
+        _id: ObjectId("aasd2213asd")
+        first_name: Jimmy
+        last_name: Ramirez
+        email: correojimmy@correo.com
+        password: "123"
+paths:
+  /api/sessions/register:
+    post:
+      summary: Registra un nuevo usuario
+      tags:
+        - Sessions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/requestBodies/nuevoUsuario"
+      responses:
+        "200":
+          description: "El usuario se agregó satisfactoriamente"
+        "400":
+          description: "El usuario no recibió los parámetros completos O el usuario ya existía y no se puede volver a registrar"

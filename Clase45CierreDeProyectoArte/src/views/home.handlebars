@@ -1,0 +1,33 @@
+<h1>Bienvenido {{ user.name }}</h1>
+<div>
+    <ul>
+        {{#each routes}}
+        <li><a href={{this.route}}>{{this.label}}</a></li>        
+        {{/each}}
+    </ul>
+</div>
+<div>
+    {{#if artworks}}
+    <h3> Últimas obras de arte</h3>
+    {{#each artworks}}
+        <div>
+            <p>{{this.title}}</p>
+            <p>{{this.price}}</p>
+            <img src={{this.image}}>
+            <div>
+                <a href='/artworks/{{this._id}}'><button>Ver</button></a>
+                {{#if ../isAdmin}}
+                <a href='/artworks/{{this._id}}/edit'><button>Editar</button></a>
+                {{else}}
+                {{/if}}
+            </div>
+        </div>
+    {{/each}}
+    {{else}}
+    <h3>No hay obras de arte por mostrar</h3>
+    {{/if}}
+</div>
+<button onclick="logout()">Salir</button>
+
+
+<script src="/js/home.js"></script>
